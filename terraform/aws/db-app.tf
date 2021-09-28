@@ -38,6 +38,7 @@ resource "aws_db_instance" "default" {
   lifecycle {
     ignore_changes = ["password"]
   }
+  iam_database_authentication_enabled = true
 }
 
 resource "aws_db_option_group" "default" {
